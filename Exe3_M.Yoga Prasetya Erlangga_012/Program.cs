@@ -9,8 +9,8 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
     class Node
     {
         /*creates nodes for the circilar nexted list*/
-        public int rollNumber;
-        public string name;
+        public int studentnumber;
+        public string studentname;
         public Node next;
     }
     class CircularList
@@ -22,16 +22,16 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
             LAST = null;
         }
 
-        public bool Search(int rollNo, ref Node previous, ref Node current)
+        public bool Search(int studentNo, ref Node previous, ref Node current)
         /*Searches for the specified node*/
         {
             for (previous = current = LAST.next; current != LAST; previous = current,
                 current = current.next)
             {
-                if (rollNo == current.rollNumber)
+                if (studentNo == current.studentnumber)
                     return (true); /*returns true if the node is  found*/
             }
-            if (rollNo == LAST.rollNumber)/*if the node is present at the end*/
+            if (studentNo == LAST.studentnumber)/*if the node is present at the end*/
                 return true;
             else
                 return (false); /*returns false if the node is not found*/
@@ -55,11 +55,11 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                 currentNode = LAST.next;
                 while (currentNode != LAST)
                 {
-                    Console.Write(currentNode.rollNumber + "   " +
-                        currentNode.name + "\n");
+                    Console.Write(currentNode.studentnumber + "   " +
+                        currentNode.studentname + "\n");
                     currentNode = currentNode.next;
                 }
-                Console.Write(LAST.rollNumber + "    " + LAST.name + "\n");
+                Console.Write(LAST.studentnumber + "    " + LAST.studentname + "\n");
             }
         }
         public void firstNode()
@@ -68,7 +68,7 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                 Console.WriteLine("\nList is empty");
             else
                 Console.WriteLine("\nThe first record in the list is : \n\n " +
-                    LAST.next.rollNumber + "    " + LAST.next.name);
+                    LAST.next.studentnumber + "    " + LAST.next.studentname);
         }
     }
 }
