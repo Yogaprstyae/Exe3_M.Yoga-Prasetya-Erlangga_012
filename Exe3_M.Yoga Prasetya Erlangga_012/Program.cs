@@ -70,5 +70,40 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                 Console.WriteLine("\nThe first record in the list is : \n\n " +
                     LAST.next.studentnumber + "    " + LAST.next.studentname);
         }
+        public bool deleteNode( int studentNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(studentNo, ref previous, ref current) == false)
+                return false;
+            if (studentNo == LAST.next.studentnumber)
+            {
+                current = LAST.next;
+                LAST.next = current.next;
+                return true;
+            }
+            if (studentNo == LAST.studentnumber)
+            {
+                current = LAST;
+                previous = current.next;
+                while (previous.next != LAST)
+                    previous = previous.next;
+                previous.next = LAST.next;
+                LAST = previous;
+                return true;
+            }
+            if (studentNo <= LAST.studentnumber)
+            {
+                current = LAST.next;
+                previous = LAST.next;
+                while (studentNo > current.studentnumber || previous == LAST)
+                {
+                    previous = current;
+                    current = current.next;
+                }
+                previous.next = current.next;
+            }
+            return true;
+        }
     }
 }
