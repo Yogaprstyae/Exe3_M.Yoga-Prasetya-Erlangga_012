@@ -168,6 +168,22 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                                 obj.insertNode();
                             }
                             break;
+                        case '2':
+                            {
+                                if (obj.listEmpty())
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                                Console.Write("Enter the roll number of the student" + "whose record is to be deleted: ");
+                                int StudentNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.deleteNode(StudentNo) == false)
+                                    Console.WriteLine("record not found");
+                                else
+                                    Console.WriteLine("Record with roll number" + StudentNo + "deleted\n");
+                            }
+                            break;
                     }
                 }
             }
