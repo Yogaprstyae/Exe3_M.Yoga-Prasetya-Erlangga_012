@@ -16,5 +16,10 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
     class CircularList
     {
         Node LAST;
+
+        public CircularList()
+        {
+            LAST = null;
+        }
     }
 }
