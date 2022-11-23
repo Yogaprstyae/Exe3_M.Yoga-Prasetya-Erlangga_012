@@ -217,6 +217,11 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                             break;
                         case '6':
                             return;
+                        default:
+                            {
+                                Console.WriteLine("\nWrong option");
+                            }
+                            break;
                     }
                 }
             }
