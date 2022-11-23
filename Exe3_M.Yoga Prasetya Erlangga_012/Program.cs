@@ -184,6 +184,11 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                                     Console.WriteLine("Record with roll number" + StudentNo + "deleted\n");
                             }
                             break;
+                        case '3':
+                            {
+                                obj.traverse();
+                            }
+                            break;
                     }
                 }
             }
