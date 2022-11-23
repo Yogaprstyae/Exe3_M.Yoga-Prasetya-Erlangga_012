@@ -160,6 +160,15 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                     Console.WriteLine("5. Diplay the firts record in the list");
                     Console.WriteLine("6. Exit");
                     Console.WriteLine("Enter your choice (1-6): ");
+                    char ch = Convert.ToChar(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case '1':
+                            {
+                                obj.insertNode();
+                            }
+                            break;
+                    }
                 }
             }
         }
