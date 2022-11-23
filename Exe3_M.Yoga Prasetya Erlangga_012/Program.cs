@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exe3_M.Yoga_Prasetya_Erlangga_012
 {
-    internal class Program
+    class Node
     {
-        static void Main(string[] args)
-        {
-        }
+        /*creates nodes for the circilar nexted list*/
+        public int rollNumber;
+        public string name;
+        public Node next;
     }
 }
