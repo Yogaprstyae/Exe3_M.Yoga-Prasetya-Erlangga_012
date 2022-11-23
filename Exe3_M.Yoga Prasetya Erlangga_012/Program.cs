@@ -62,5 +62,13 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                 Console.Write(LAST.rollNumber + "    " + LAST.name + "\n");
             }
         }
+        public void firstNode()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+                Console.WriteLine("\nThe first record in the list is : \n\n " +
+                    LAST.next.rollNumber + "    " + LAST.next.name);
+        }
     }
 }
