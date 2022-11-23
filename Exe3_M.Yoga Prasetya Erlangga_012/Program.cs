@@ -105,5 +105,45 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
             }
             return true;
         }
+        public void insertNode()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\nEnter the roll number of the student: ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nEnter the name of the student");
+            nm = Console.ReadLine();
+            Node newNode = new Node();
+            newNode.studentnumber = nim;
+            newNode.studentname = nm;
+
+            if (LAST == null || nim <= LAST.studentnumber)
+            {
+                if ((LAST != null) && (nim == LAST.studentnumber))
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                newNode.next = LAST;
+                LAST = newNode;
+                return;
+            }
+            Node previous, current;
+            previous = LAST.next;
+            current = LAST.next;
+
+            while ((current != null) && (nim >= current.studentnumber))
+            {
+                if (nim == current.studentnumber)
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                previous.next = current;
+                previous.next = newNode;
+            }
+            newNode.next = LAST.next;
+            LAST.next = newNode;
+        }
     }
 }
