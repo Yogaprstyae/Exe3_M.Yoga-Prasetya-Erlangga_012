@@ -210,6 +210,11 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                                 }
                             }
                             break;
+                        case '5' :
+                            {
+                                obj.firstNode();
+                            }
+                            break;
                     }
                 }
             }
