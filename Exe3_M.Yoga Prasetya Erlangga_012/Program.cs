@@ -177,7 +177,7 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                                 if (obj.deleteNode(StudentNo) == false)
                                     Console.WriteLine("record not found");
                                 else
-                                    Console.WriteLine("Record with roll number" + StudentNo + " deleted\n");
+                                    Console.WriteLine("Record with roll number " + StudentNo + " deleted\n");
                             }
                             break;
                         case '3':
