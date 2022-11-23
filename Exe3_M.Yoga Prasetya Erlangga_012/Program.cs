@@ -222,7 +222,7 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                 }
                 catch (Exception e)
                 {
-                    Console.WriteLine("Check for values entered.");
+                    Console.WriteLine(e.ToString());
                 }
             }
         }
