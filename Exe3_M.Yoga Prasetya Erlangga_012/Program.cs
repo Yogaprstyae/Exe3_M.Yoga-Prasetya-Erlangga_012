@@ -50,16 +50,12 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                 Console.WriteLine("\nLsit is empty");
             else
             {
-                Console.WriteLine("\nRecords in the list are : \n");
+                Console.WriteLine("\n Record in the list are : \n");
                 Node currentNode;
                 currentNode = LAST.next;
-                while (currentNode != LAST)
-                {
-                    Console.Write(currentNode.studentnumber + "   " +
-                        currentNode.studentname + "\n");
-                    currentNode = currentNode.next;
-                }
-                Console.Write(LAST.studentnumber + "    " + LAST.studentname + "\n");
+                for (currentNode = LAST; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.studentnumber + " " + currentNode.studentname + "\n");
+                Console.WriteLine();
             }
         }
         public void firstNode()
@@ -175,13 +171,13 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
                                     Console.WriteLine("\nList is empty");
                                     break;
                                 }
-                                Console.Write("Enter the roll number of the student" + "whose record is to be deleted: ");
+                                Console.Write("Enter the roll number of the student" + " whose record is to be deleted: ");
                                 int StudentNo = Convert.ToInt32(Console.ReadLine());
                                 Console.WriteLine();
                                 if (obj.deleteNode(StudentNo) == false)
                                     Console.WriteLine("record not found");
                                 else
-                                    Console.WriteLine("Record with roll number" + StudentNo + "deleted\n");
+                                    Console.WriteLine("Record with roll number" + StudentNo + " deleted\n");
                             }
                             break;
                         case '3':
