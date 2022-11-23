@@ -109,9 +109,9 @@ namespace Exe3_M.Yoga_Prasetya_Erlangga_012
         {
             int nim;
             string nm;
-            Console.WriteLine("\nEnter the roll number of the student: ");
+            Console.WriteLine("\nEnter the roll number of the student : ");
             nim = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("\nEnter the name of the student");
+            Console.WriteLine("\nEnter the name of the student : ");
             nm = Console.ReadLine();
             Node newNode = new Node();
             newNode.studentnumber = nim;
